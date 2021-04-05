@@ -2,7 +2,7 @@
     $server     = "localhost";
     $username   = "root";
     $password   = "";
-    $database   = "lazulafarms";
+    $database   = "lazula";
 
     $connection = mysqli_connect($server, $username,$password, $database);
     if($connection == TRUE){
