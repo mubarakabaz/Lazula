@@ -20,9 +20,9 @@
 .line-horizontal{
     width: 50%;
 }
-.display-5{
-    margin-bottom: 1rem;
-}
+
+
+
 </style>
 
 <!-- Icofont -->

@@ -9,31 +9,85 @@
 <body>
 
     <!-- Navs Top -->
-    <nav>
+    <nav class="mb-2">
         <?php include('design/navbar.php'); ?>
     </nav>
     
-    <div class="container-lg">
-        <hr class="line-horizontal"/>
-        <div class="text-center">
-            <div class="display-6"><strong>Realtime Monitoring</strong></div>
-            <br/>
+    <!-- info nama tanaman & suhu -->
+    <div class="card mx-auto mb-2" style="max-width: 25rem;">
+        <div class="card-body">
+        <div class="lead text-center">
+            <strong>Realtime Monitoring</strong>
         </div>
-        
-        <div class="container-md info-satu">
+        <hr/>
+        <div class="row">
+            <div class="col-6">
+                <strong>Nama Tanaman</strong>
+            </div>
+            <div class="col-6"> : Caisim</div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <strong>Suhu</strong>
+            </div>
+            <div class="col-6"> : 24 <i class="icofont-celsius"></i></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Status pH & ppm -->
+    <div class="card mx-auto mb-2" style="max-width: 25rem;">
+        <div class="card-body">
+            <div class="lead text-center"><strong>Nutrisi</strong></div>
+            <hr/>
             <div class="row">
-                <div class="col-6">
-                    <strong>Nama Tanaman</strong>
+                <div class="col text-center">
+                    <strong>pH</strong>
                 </div>
-                <div class="col-6"> : Caisim</div>
+                <div class="col text-center">
+                    <strong>TDS</strong>
+                </div>
             </div>
             <div class="row">
-                <div class="col-6">
-                    <strong>Suhu</strong>
+                <div class="col text-center">
+                    <div class="display-4">4</div>
                 </div>
-                <div class="col-6"> : 24 <i class="icofont-celsius"></i></div>
+                <div class="col text-center">
+                    <div class="display-4">800</div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Status Pompa -->
+    <div class="card mx-auto" style="max-width: 25rem;">
+        <div class="card-body">
+            <div class="lead text-center">
+                <div class="lead text-center"><strong>Pompa</strong></div>
+                <hr/>
+                <div class="row">
+                    <div class="col text-center">
+                        <strong>pH A</strong>
+                    </div>
+                    <div class="col text-center">
+                        <strong>pH B</strong>
+                    </div>
+                    <div class="col text-center">
+                        <strong>Nutrisi</strong>
+                    </div>
+                    <div class="col text-center">
+                        <strong>AirBaku</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center text-danger">OFF</div>
+                    <div class="col text-center text-danger">OFF</div>
+                    <div class="col text-center text-danger">OFF</div>
+                    <div class="col text-center text-danger">OFF</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

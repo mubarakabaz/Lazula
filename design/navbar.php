@@ -11,13 +11,13 @@
 <div class="container">
     <ul class="nav justify-content-center">
         <li class="nav-item">
-            <a href="" class="nav-link nav-top text-body">Nutrisi</a>
+            <a href="" class="nav-link nav-top text-body"><strong>Nutrisi</strong></a>
         </li>
         <li class="nav-item">
-            <a href="" class="nav-link text-body">History</a>
+            <a href="" class="nav-link text-body"><strong>History</strong></a>
         </li>
         <li class="nav-item">
-            <a href="" class="nav-link text-body">Blog</a>
+            <a href="" class="nav-link text-body"><strong>Blog</strong></a>
         </li>
     </ul>
 </div>
