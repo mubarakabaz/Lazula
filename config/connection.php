@@ -6,7 +6,7 @@
 
     $connection = mysqli_connect($server, $username,$password, $database);
     if($connection == TRUE){
-        echo "Berhasil Terhubung!";
+       // echo "Berhasil Terhubung!";
     } else{
         echo "Gagal Terhubung!";
     }

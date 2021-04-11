@@ -1,6 +1,6 @@
 <canvas id="myChart"></canvas>
 <?php
-    //include('config/connection.php');
+    include('config/connection.php');
     include('design/design.php');
     
     // Inisialisasi Data
@@ -15,7 +15,7 @@
      * Inisialisasi Variabel
      */
     var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new chart(ctx,{
+    var chart = new Chart(ctx,{
         // Type of Chart
         type: 'line',
         
@@ -30,7 +30,7 @@
             ],
             datasets: [{
                 label: 'PH',
-                borderColor: '#454743',
+                borderColor: 'rgb(75, 192, 192)',
                 data: [
                     <?php
                     while($row2 = mysqli_fetch_array($data2)){
@@ -56,7 +56,14 @@
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            }
+        },
     });
 
         

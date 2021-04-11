@@ -17,9 +17,7 @@
         <h5 class="text-center">Data Statistik</h5>
     </div>
     <div class="card-body">
-        <h1 class="card-text text-center">
-            <?php include('chart.php'); ?>
-        </h1>
+        <?php include('chart.php'); ?>
     </div>
 </body>
 
