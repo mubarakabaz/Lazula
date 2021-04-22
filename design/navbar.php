@@ -1,8 +1,8 @@
 <?php
-//session_start();
-//if($_SESSION['status'] != "login"){
-    //header("location:/../login.php?message=belum_login");
-//}
+session_start();
+if($_SESSION['status'] != "login"){
+    header("location:/../login.php?message=belum_login");
+}
 ?>
 
 <div class="container justify-content-center">
