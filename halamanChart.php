@@ -1,23 +1,35 @@
 <html>
 
 <head>
-    <?php 
-            // header("refresh:5");
-            include('design/design.php');
-        ?>
+    <?php
+    // header("refresh: 5");
+    include('desain.php');
+    ?>
 </head>
 
 <body>
-    <!-- Navs Top -->
-    <nav class="mb-2">
-        <?php include('design/navbar.php'); ?>
-    </nav>
+    <div class="container">
+        <br>
+        <h3 class="text-center text-primary"><STRONG>Sistem Hidroponik Otomatis</STRONG></h3>
+        <P class="text-center">Menggunakan <Strong>PH Sensor</Strong>, <strong>TDS Turbidity</strong> Sensor, dan <strong>Suhu</strong> DS18B20.</P>
+        <br>
 
-    <div class="card-header bg-white">
-        <h5 class="text-center">Data Statistik</h5>
-    </div>
-    <div class="card-body">
-        <?php include('chart.php'); ?>
+        <?php include('navbar.php'); ?>
+
+        <br>
+
+        <div class="card-header bg-white">
+            <h5 class="text-center">Data Statistik</h5>
+        </div>
+        <div class="card-body">
+            <h1 class="card-text text-center">
+                <?php include('chart.php'); ?>
+            </h1>
+        </div>
+
+
+
+
     </div>
 </body>
 
