@@ -1,3 +1,4 @@
+/config
 /node_modules
 /public/hot
 /public/storage
@@ -13,3 +14,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+public/back/plugins
+public/back/scss
+public/back/images/profiles
+public/back/images/users
+public/uploads
