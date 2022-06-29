@@ -54,6 +54,6 @@
     </div>
     <!--//app-header-inner-->
 
-    @include('back.includes.sidebar')
+    @include('includes.sidebar')
     <!--//app-sidepanel-->
 </header>

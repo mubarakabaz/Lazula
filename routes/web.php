@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BlogTutorialController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +25,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::resource('artikel', ArtikelController::class);
+Route::resource('kategori', KategoriController::class);
+Route::resource('tutorial', BlogTutorialController::class);
