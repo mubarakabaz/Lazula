@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSensorsTable extends Migration
+class CreateKalibrasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateSensorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sensor', function (Blueprint $table) {
+        Schema::create('kalibrasis', function (Blueprint $table) {
             $table->id();
-            $table->text('suhu');
-            $table->text('ph');
-            $table->text('tds');
-            $table->text('ppu');
-            $table->text('ppd');
-            $table->text('ppn');
-            $table->text('pab');
+            $table->string('phmin');
+            $table->string('phmax');
+            $table->string('tdsmin');
+            $table->string('tdsmax');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateSensorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sensor');
+        Schema::dropIfExists('kalibrasis');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sensor;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,7 +19,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('back.dashboard');
+        $sensor = Sensor::all();
+
+        return view('back.dashboard', compact('sensor'));
     }
 
     /**

@@ -47,7 +47,7 @@
 
 
     <!-- Script -->
-    @include('includes.scriptsjs')
+    @include('includes.scriptjs')
     @include('sweetalert::alert')
 
 </body>
