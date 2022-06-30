@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriController extends Controller
 {
@@ -26,7 +28,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('back.kategori.create');
     }
 
     /**
@@ -37,7 +39,18 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama_kategori' => 'required|min:4'
+        ]);
+
+        $kategori = Kategori::create([
+            'nama_kategori' => $request->nama_kategori,
+            'slug' => Str::slug($request->nama_kategori),
+        ]);
+
+        
+        Alert::success('Berhasil', 'Kategori Baru berhasil ditambahkan');
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -59,7 +72,9 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kategori = Kategori::findOrFail($id);
+
+        return view('back.kategori.edit', compact('kategori'));
     }
 
     /**
@@ -71,7 +86,14 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->nama_kategori);
+
+        $kategori = Kategori::findOrFail($id);
+        $kategori->update($data);
+
+        Alert::success('Berhasil', 'Kategori berhasil diubah');
+        return redirect()->route('kategori.index');
     }
 
     /**

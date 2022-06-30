@@ -274,7 +274,7 @@
         <div class="card full-height">
             <div class="card-header">
                 <div class="card-head-row">
-                    <div class="card-title">Artikel Terpopuler</div>
+                    <div class="card-title">Artikel Tutorial</div>
                 </div>
             </div>
             <div class="card-body">

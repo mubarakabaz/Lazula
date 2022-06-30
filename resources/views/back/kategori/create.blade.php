@@ -38,11 +38,16 @@
                     <form class="settings-form" method="POST" action="{{ route('kategori.store') }}">
                         @csrf
                         <div class="mb-3">
-                            <label for="kategori" class="form-label"><h5>Nama Kategori</h5></label>
-                            <input type="text" name="nama_kategori" class="form-control" id="text" required="" placeholder="Masukkan nama kategori yang baru">
+                            <label for="kategori" class="form-label">
+                                <h5>Nama Kategori</h5>
+                            </label>
+                            <input type="text" name="nama_kategori" class="form-control" id="text" required=""
+                                placeholder="Masukkan nama kategori yang baru">
                         </div>
-                        
-                        <button type="submit" class="btn app-btn-primary">Save</button>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-lg app-btn-primary mt-2">Save</button>
+                        </div>
                     </form>
 
                 </div>
