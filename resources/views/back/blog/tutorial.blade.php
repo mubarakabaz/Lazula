@@ -18,7 +18,7 @@
                         <!--//col-->
                         <div class="col-auto mt-4">
                             <h4 class="app-card-title">
-                                <a href="{{ route('detail-artikel', $col->slug) }}">
+                                <a href="{{ url('blog', $col->slug) }}">
                                     {{ $col->judul }}
                                 </a>
                             </h4>

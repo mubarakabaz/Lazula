@@ -18,7 +18,7 @@ class CreateArtikelsTable extends Migration
             $table->string('judul');
             $table->string('slug');
             $table->text('excerpt');
-            $table->text('body');
+            $table->longText('body');
             $table->integer('kategori_id');
             $table->integer('user_id')->nullable();
             $table->string('gambar_artikel');

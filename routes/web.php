@@ -32,5 +32,7 @@ Route::resource('kategori', KategoriController::class);
 Route::resource('tutorial', BlogTutorialController::class);
 Route::resource('iklan', IklanController::class);
 
+Route::get('/blog/{slug}', [ArtikelController::class, 'blog'])->name('blog');
+
 
 Route::get('/input', [SensorController::class, 'input']);
