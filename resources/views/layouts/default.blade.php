@@ -17,6 +17,7 @@
     <link id="theme-style" rel="stylesheet" href="{{ asset('back/css/portal.css') }}">
 
     <!-- Style Modif by Me -->
+    <link rel="stylesheet" href="{{asset('css/myapp.css')}}">
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- BoxIcons -->

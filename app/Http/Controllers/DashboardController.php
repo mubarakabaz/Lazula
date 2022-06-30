@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sensor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -19,9 +20,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $sensor = Sensor::all();
+        $sensor = DB::table('sensor')->orderBy('created_at', 'desc')->limit(1)->get();
 
-        return view('back.dashboard', compact('sensor'));
+        return view('back.dashboard', [
+            'sensor' => $sensor
+        ]);
     }
 
     /**

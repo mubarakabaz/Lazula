@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Artikel;
 use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
@@ -14,9 +14,9 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $blog = Blog::all();
+        $artikel = Artikel::all();
         
-        return view('back.blog.index', compact('blog'));
+        return view('back.blog.index', compact('artikel'));
     }
 
     /**
