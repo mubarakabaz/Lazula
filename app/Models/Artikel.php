@@ -9,6 +9,23 @@ class Artikel extends Model
 {
     use HasFactory;
 
+    protected $table = 'artikel';
+
+    protected $fillable = [
+        'judul',
+        'slug',
+        'excerpt',
+        'body',
+        'kategori_id',
+        'user_id',
+        'gambar_artikel',
+        'thumbnail_artikel',
+        'is_active',
+        'viewers',
+    ];
+
+    protected $hidden = [];
+
     public function kategori(){
         return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
     }
