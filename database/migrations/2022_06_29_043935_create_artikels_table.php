@@ -21,7 +21,7 @@ class CreateArtikelsTable extends Migration
             $table->longText('body');
             $table->integer('kategori_id');
             $table->integer('user_id')->nullable();
-            $table->string('gambar_artikel');
+            $table->string('gambar_artikel')->nullable();
             $table->boolean('is_active');
             $table->integer('viewers');
             $table->timestamps();
