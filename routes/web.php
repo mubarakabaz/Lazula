@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BlogTutorialController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\IklanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SensorController;
@@ -19,10 +20,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Auth::routes();
 
