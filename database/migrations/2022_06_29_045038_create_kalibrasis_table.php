@@ -13,7 +13,7 @@ class CreateKalibrasisTable extends Migration
      */
     public function up()
     {
-        Schema::create('kalibrasis', function (Blueprint $table) {
+        Schema::create('kalibrasi', function (Blueprint $table) {
             $table->id();
             $table->string('phmin');
             $table->string('phmax');
@@ -30,6 +30,6 @@ class CreateKalibrasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kalibrasis');
+        Schema::dropIfExists('kalibrasi');
     }
 }

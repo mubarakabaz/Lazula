@@ -58,16 +58,20 @@
                             </label>
                             <select name="kategori_id" class="form-control">
                                 
+                                <option value="">Pilih Kategori</option>
                                 @foreach ($kategori as $row)
                                 <option value="{{ $row->id }}">{{ $row->nama_kategori }}</option>
                                 @endforeach
                         </div>
+
+                        
 
                         <div class="mb-3 mt-3 from-group">
                             <label for="gambar_artikel" class="form-label">
                                 <h6>Gambar Artikel</h6>
                             </label>
                             <input type="file" name="gambar_artikel" class="form-control">
+                            <label for="gambar_artikel" class="form-label text-center">Masukkan Gambar dengan Ukuran Maksimal 2MB</label>
                         </div>
 
                         <div class="mb-3 from-group">
@@ -95,3 +99,8 @@
 </div>
 
 @endsection
+
+@section('scripts')
+<script type="text/javascript">
+    
+</script>

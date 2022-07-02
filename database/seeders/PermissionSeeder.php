@@ -46,21 +46,21 @@ class PermissionSeeder extends Seeder
         $masterRole = Role::create(['name' => 'master']);
 
         $user = User::factory()->create([
-            'name' => 'Example User',
+            'name' => 'Writer',
             'email' => 'writer@mubarakabaz.my.id',
             'password' => bcrypt('12345678'),
         ]);
         $user->assignRole($writerRole);
 
         $user = User::factory()->create([
-            'name' => 'Example User',
+            'name' => 'Admin',
             'email' => 'admin@mubarakabaz.my.id',
             'password' => bcrypt('12345678'),
         ]);
         $user->assignRole($adminRole);
         
         $user = User::factory()->create([
-            'name' => 'Master Room',
+            'name' => 'Mubarak',
             'email' => 'master@mubarakabaz.my.id',
             'password' => bcrypt('12345678'),
         ]);

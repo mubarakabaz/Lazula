@@ -13,11 +13,11 @@
                         </h5>
                         <p class="text-color m-0 pt-2 d-flex align-items-center">
                             <i class='bx bx-user'></i>
-                            <span class="mdi fs-10 mr-1"> by {{$col->users->name}} </span>
+                            <span class="mdi fs-10 mr-1">  {{$col->users->name}} </span>
                             <i class='bx bx-bookmark'></i>
                             <span class="mdi fs-10 mr-1"> {{$col->created_at}} </span>
                             <i class='bx bx-message-detail'></i>
-                            <span class="fs-10 mr-1"> {{$col->viewers}}</span>
+                            <span class="fs-10 mr-1">  {{$col->viewers}}</span>
 
                         </p>
                     </div>
@@ -122,30 +122,7 @@
 
     <div class="col-lg-4">
         <div class="row">
-            <div class="col-sm-6">
-
-                @forelse ($slider_news as $sn)
-                <div class="py-3 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-
-                        <span class="fs-12 text-muted">{{$sn->users->name}}</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                        The Most And Least Visited Countries In The World
-                    </p>
-                </div>
-                @empty
-                <div class="py-3 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-
-                        <span class="fs-12 text-muted">Henry Itondo</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                        The Most And Least Visited Countries In The World
-                    </p>
-                </div>
-                @endforelse
-            </div>
+            
             <div class="col-sm-6">
                 <div class="py-3 border-bottom">
                     <div class="d-flex align-items-center pb-2">
