@@ -5,15 +5,15 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="d-flex position-relative  float-left">
-                <h3 class="section-title">World News</h3>
+                <h3 class="section-title">Artikel Rekomendasi</h3>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
             <div class="position-relative image-hover">
-                <img src="assets/images/dashboard/travel.jpg" class="img-fluid" alt="world-news" />
-                <span class="thumb-title">TRAVEL</span>
+                <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2020/02/28/22677.jpg" class="img-fluid" alt="world-news" />
+                <span class="thumb-title">Berita</span>
             </div>
             <h5 class="font-weight-bold mt-3">
                 Refugees flood Turkey's border with Greece
@@ -25,8 +25,8 @@
         </div>
         <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
             <div class="position-relative image-hover">
-                <img src="assets/images/dashboard/news.jpg" class="img-fluid" alt="world-news" />
-                <span class="thumb-title">NEWS</span>
+                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/93D8/production/_95984873_8b175c89-c551-479f-ae88-10647f9234cd.jpg" class="img-fluid" alt="world-news" />
+                <span class="thumb-title">Berita</span>
             </div>
             <h5 class="font-weight-bold mt-3">
                 South Korea’s Moon Jae-in sworn in vowing address
@@ -38,8 +38,8 @@
         </div>
         <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
             <div class="position-relative image-hover">
-                <img src="assets/images/dashboard/art.jpg" class="img-fluid" alt="world-news" />
-                <span class="thumb-title">ART</span>
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2022%2F02%2F08%2Favalanche-dog-training-4.jpg" class="img-fluid" alt="world-news" />
+                <span class="thumb-title">Berita</span>
             </div>
             <h5 class="font-weight-bold mt-3">
                 These puppies are training to assist in avalanche rescue
@@ -51,14 +51,14 @@
         </div>
         <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
             <div class="position-relative image-hover">
-                <img src="assets/images/dashboard/business.jpg" class="img-fluid" alt="world-news" />
-                <span class="thumb-title">BUSINESS</span>
+                <img src="https://www.aljazeera.com/wp-content/uploads/2022/07/2022-07-04T084026Z_1102736032_RC21RU95F76F_RTRMADP_3_UKRAINE-CRISIS-GAIDAI.jpg?resize=770%2C513" class="img-fluid" alt="world-news" />
+                <span class="thumb-title">Berita</span>
             </div>
             <h5 class="font-weight-bold mt-3">
-                'Love Is Blind' couple opens up about their first year
+            Russia-Ukraine live news: Moscow shifts focus to Donetsk
             </h5>
             <p class="fs-15 font-weight-normal">
-                Lorem Ipsum has been the industry's standard dummy text
+            The governor of Luhansk says the eastern region is ..
             </p>
             <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
         </div>
@@ -75,11 +75,11 @@
     <div class="row">
         <div class="col-lg-6  mb-5 mb-sm-2">
             <div class="position-relative image-hover">
-                <img src="assets/images/dashboard/glob.jpg" class="img-fluid" alt="world-news" />
-                <span class="thumb-title">NEWS</span>
+                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/07/Solo-Leveling-Anime.jpg?q=50&fit=contain&w=750&h=&dpr=1.5" class="img-fluid" alt="world-news" />
+                <span class="thumb-title">Anime</span>
             </div>
             <h1 class="font-weight-600 mt-3">
-                Melania Trump speaks about courage at State Department
+            Solo Leveling Drops Intense First Teaser for Anime Series
             </h1>
             <p class="fs-15 font-weight-normal">
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -91,11 +91,11 @@
             <div class="row">
                 <div class="col-sm-6  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-5.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">POLITICS</span>
+                        <img src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2022/07/03/f5579887-756d-4236-a35b-a1c7e0b9-20220703103711.jpeg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Tips & Trick</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        A look at California's eerie plane graveyards
+                    Emirate Car Interior, Bikin Jok Kulit Desain Bebas, Sehari Beres
                     </h5>
                     <p class="fs-15 font-weight-normal">
                         Lorem Ipsum has been the industry's standard dummy text
@@ -103,11 +103,11 @@
                 </div>
                 <div class="col-sm-6  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-6.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">TRAVEL</span>
+                        <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/e21c2da6684a35e8e2f982b3cdd56a0b.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Anime</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        The world's most beautiful racecourses
+                    Trigun Stampede's First Look Teases a Colorful Reboot
                     </h5>
                     <p class="fs-15 font-weight-normal">
                         Lorem Ipsum has been the industry's standard dummy text
@@ -117,11 +117,11 @@
             <div class="row mt-3">
                 <div class="col-sm-6  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-7.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">POLITICS</span>
+                        <img src="https://www.omgubuntu.co.uk/wp-content/uploads/2019/02/linux-mint.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Teknologi</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        Japan cancels cherry blossom festivals over virus fears
+                    Linux Mint 21 Won’t Use Ubuntu’s ‘Killer’ Memory Feature
                     </h5>
                     <p class="fs-15 font-weight-normal">
                         Lorem Ipsum has been the industry's standard dummy text
@@ -129,11 +129,11 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-8.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">TRAVEL</span>
+                        <img src="https://d3fd5j8wprxn3h.cloudfront.net/wp-content/uploads/2022/05/Spy-x-Family-UNIQLO.png" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Anime</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        Classic cars reborn as electric vehicles
+                    Spy x Family to Launch New Collection With Uniqlo
                     </h5>
                     <p class="fs-15 font-weight-normal">
                         Lorem Ipsum has been the industry's standard dummy text
@@ -156,65 +156,65 @@
             <div class="row">
                 <div class="col-sm-4  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-9.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">LIFESTYLE</span>
+                        <img src="https://www.wa.gov.au/system/files/styles/crop_feature_large/private/2022-07/Food%20and%20beverage%20platter.jpg?itok=d2vug5SM" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Agrikultur</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        The island country that gave Mayor Pete his name
+                    Have your say on WA’s biosecurity and agriculture laws
                     </h5>
                 </div>
                 <div class="col-sm-4 mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-10.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">SPORTS</span>
+                        <img src="https://cdn.agriland.ie/uploads/2022/02/Carbon-farming-1280x720.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Agrikultur</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        Disney parks expand (good) vegan food options
+                    Farming for carbon – beware of double counting
                     </h5>
                 </div>
                 <div class="col-sm-4 mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-11.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">INTERNET</span>
+                        <img src="https://daenggassing.com/wp-content/uploads/2022/06/okkots-1024x538.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Budaya</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        A hot springs where clothing is optional after dark
+                    OKKO, FENOMENA BAHASA DI SULAWESI SELATAN
                     </h5>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-4 mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-12.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">NEWS</span>
+                        <img src="https://asset.kompas.com/crops/v85DnhV7LBb6YNTyAW9QZhCuWZU=/0x0:1000x667/750x500/data/photo/2020/05/18/5ec24deb407a7.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Budaya</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        Japanese chef carves food into incredible pieces of art
+                    PABUKA ANDALAN ANAK MAKASSAR
                     </h5>
                 </div>
                 <div class="col-sm-4 mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-13.jpg" class="img-fluid" alt="world-news" />
-                        <span class="thumb-title">NEWS</span>
+                        <img src="https://assets.pikiran-rakyat.com/crop/192x128:1920x1063/x/photo/2021/09/18/1693066210.jpg" class="img-fluid" alt="world-news" />
+                        <span class="thumb-title">Berita</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        The Misanthrope Society: A Taipei bar for people who
+                    Mimpi Remaja Afghanistan Ingin Bersekolah Terwujud, Setelah Menjadi Sorotan Media
                     </h5>
                 </div>
                 <div class="col-sm-4 mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                        <img src="assets/images/dashboard/star-magazine-14.jpg" class="img-fluid" alt="world-news" />
+                        <img src="https://cdn.medcom.id/dynamic/content/2022/07/03/1446218/MIAi2jtdK0.jpg?w=640" class="img-fluid" alt="world-news" />
                         <span class="thumb-title">TOURISM</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                        From Pakistan to the Caribbean: Curry's journey
+                    Ulama Afghanistan Serukan Masyarakat Internasional Akui Pemerintahan Taliban
                     </h5>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="position-relative mb-3">
-                <img src="assets/images/dashboard/star-magazine-15.jpg" class="img-fluid" alt="world-news" />
+                <img src="https://t4.ftcdn.net/jpg/02/95/01/11/360_F_295011159_onAShQtNLr2uZJYSHPSv2rsSYZBCqcMU.jpg" class="img-fluid" alt="world-news" />
                 <div class="video-thumb text-muted">
                     <span><i class="mdi mdi-menu-right"></i></span>LIVE
                 </div>
@@ -228,7 +228,7 @@
                 <div class="col-sm-12">
                     <div class="border-bottom pb-3">
                         <h5 class="font-weight-600 mt-0 mb-0">
-                            South Korea’s Moon Jae-in sworn in vowing address
+                            Lampu Hijau 3 Negara Biayai Proyek MRT Hingga Pilihan Mobil Serbaguna Baby Boomer
                         </h5>
                         <p class="text-color m-0 d-flex align-items-center">
                             <span class="fs-10 mr-1">2 hours ago</span>
@@ -241,7 +241,7 @@
                 <div class="col-sm-12">
                     <div class="border-bottom pt-4 pb-3">
                         <h5 class="font-weight-600 mt-0 mb-0">
-                            South Korea’s Moon Jae-in sworn in vowing address
+                        Bandar arisan bodong rugikan ratusan nasabah diamankan
                         </h5>
                         <p class="text-color m-0 d-flex align-items-center">
                             <span class="fs-10 mr-1">2 hours ago</span>
@@ -251,32 +251,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-12">
-                    <div class="border-bottom pt-4 pb-3">
-                        <h5 class="font-weight-600 mt-0 mb-0">
-                            South Korea’s Moon Jae-in sworn in vowing address
-                        </h5>
-                        <p class="text-color m-0 d-flex align-items-center">
-                            <span class="fs-10 mr-1">2 hours ago</span>
-                            <i class="mdi mdi-bookmark-outline mr-3"></i>
-                            <span class="fs-10 mr-1">126</span>
-                            <i class="mdi mdi-comment-outline"></i>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="pt-4">
-                        <h5 class="font-weight-600 mt-0 mb-0">
-                            South Korea’s Moon Jae-in sworn in vowing address
-                        </h5>
-                        <p class="text-color m-0 d-flex align-items-center">
-                            <span class="fs-10 mr-1">2 hours ago</span>
-                            <i class="mdi mdi-bookmark-outline mr-3"></i>
-                            <span class="fs-10 mr-1">126</span>
-                            <i class="mdi mdi-comment-outline"></i>
-                        </p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

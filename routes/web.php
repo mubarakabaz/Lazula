@@ -4,9 +4,9 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BlogTutorialController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\IklanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SensorController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,15 +22,17 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::resource('users', UserController::class);
 Route::resource('artikel', ArtikelController::class);
 Route::resource('kategori', KategoriController::class);
 Route::resource('tutorial', BlogTutorialController::class);
-Route::resource('iklan', IklanController::class);
-
 Route::get('/tabel/sensor-suhu', [SensorController::class, 'tabelsuhu'])->name('tabel.suhu');
+
+Auth::routes();
+
+
 
 Route::get('/blog/{slug}', [ArtikelController::class, 'blog'])->name('blog');
 
