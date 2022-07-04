@@ -3,6 +3,7 @@
 <script src="{{ asset('back/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 
 <!-- Charts JS -->
+<script src="{{ asset('back/js/mychart.js')}}"></script>
 <script src="{{ asset('back/plugins/chart.js/chart.min.js')}}"></script>
 <script src="{{ asset('back/js/index-charts.js')}}"></script>
 

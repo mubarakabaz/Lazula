@@ -93,7 +93,7 @@ class ArtikelController extends Controller
         $kategori = Kategori::all();
         $artikel = DB::table('artikel')->where('slug', $slug)->first();
 
-        return view('back.detail-blog', [
+        return view('front.detail-artikel', [
             'artikel' => $artikel,
             'kategori' => $kategori,
         ]);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sensor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SensorController extends Controller
 {
@@ -20,6 +21,15 @@ class SensorController extends Controller
 
         Sensor::create($request->all());
 
-        dd($data);
+        // dd($data);
+    }
+
+    public function tabelsuhu(){
+        $chartsuhu = DB::select("SELECT suhu FROM sensor ORDER BY id DESC LIMIT 20");
+
+        
+        return view('back.tabels.suhu', [
+            'chartsuhu' => $chartsuhu,
+        ]);
     }
 }

@@ -18,9 +18,12 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('front/assets/css/style.css')}}">
     <!-- endinject -->
-    
+
+    <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+    
 
 </head>
 

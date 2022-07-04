@@ -11,7 +11,7 @@ class FrontendController extends Controller
     public function index(){
         $slider = Artikel::orderBy('created_at', 'desc')->take(4)->get();
 
-        $slider_news = Artikel::where('kategori_id', '=', 1)->orderBy('created_at', 'desc')->get();
+        $slider_news = Artikel::where('kategori_id', '=', 1)->orderBy('created_at', 'desc')->take(4)->get();
 
         return view('front.home', [
             'slider' => $slider,

@@ -30,6 +30,8 @@ Route::resource('kategori', KategoriController::class);
 Route::resource('tutorial', BlogTutorialController::class);
 Route::resource('iklan', IklanController::class);
 
+Route::get('/tabel/sensor-suhu', [SensorController::class, 'tabelsuhu'])->name('tabel.suhu');
+
 Route::get('/blog/{slug}', [ArtikelController::class, 'blog'])->name('blog');
 
 

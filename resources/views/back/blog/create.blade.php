@@ -35,7 +35,7 @@
             <div class="app-card app-card-orders-table shadow-sm">
                 <div class="app-card-body">
 
-                    <form class="settings-form" method="POST" action="{{ route('artikel.store') }}"
+                    <form id="save-content-form" class="settings-form" method="POST" action="{{ route('artikel.store') }}"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 from-group">
@@ -49,7 +49,7 @@
                             <label for="body" class="form-label">
                                 <h6>Body Artikel</h6>
                             </label>
-                            <textarea name="body" class="form-control" id="myeditorinstance"></textarea>
+                            <textarea name="body" class="form-control" id="tinymce"></textarea>
                         </div>
 
                         <div class="mb-3 from-group">
@@ -100,7 +100,3 @@
 
 @endsection
 
-@section('scripts')
-<script type="text/javascript">
-    
-</script>

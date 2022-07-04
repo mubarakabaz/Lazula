@@ -23,8 +23,13 @@
     <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- TinyMCE -->
-    <script src="{{asset('vendor/tinymce/js/tinymce.min.js')}}"></script>
+    <script src="https://cdn.tiny.cloud/1/nkhvpn19cyi6agyy31l3vg524rrekazggz7ii54bnn27lsdf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="{{ asset('js/tinymce-config.js') }}"></script>
+    
 </head>
 
 <body class="app">
@@ -51,6 +56,7 @@
     <!-- Script -->
     @include('includes.scriptjs')
     @include('sweetalert::alert')
+    
 
 </body>
 
