@@ -17,4 +17,6 @@ class Kalibrasi extends Model
         'tdsmin',
         'tdsmax',
     ];
+
+    
 }

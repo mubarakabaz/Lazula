@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kalibrasi;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class SensorController extends Controller
 {
+    public function rekap(){
+        $sensor = DB::table('sensor')->paginate(10);
+        return view('back.tabels.rekap',[
+            'sensor' => $sensor,
+        ]);
+    }
     public function input(Request $request){
         $data = $request->all();
         $data['suhu'] = $request->suhu;
@@ -32,4 +39,6 @@ class SensorController extends Controller
             'chartsuhu' => $chartsuhu,
         ]);
     }
+
+    
 }

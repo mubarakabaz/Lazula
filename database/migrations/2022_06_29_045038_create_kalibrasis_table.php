@@ -15,10 +15,10 @@ class CreateKalibrasisTable extends Migration
     {
         Schema::create('kalibrasi', function (Blueprint $table) {
             $table->id();
-            $table->string('phmin');
-            $table->string('phmax');
-            $table->string('tdsmin');
-            $table->string('tdsmax');
+            $table->float('phmin');
+            $table->float('phmax');
+            $table->float('tdsmin');
+            $table->float('tdsmax');
             $table->timestamps();
         });
     }

@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
 
         // Secara implisit berikan peran "Master Room" semua pemeriksaan izin menggunakan can()
         Gate::before(function ($user, $ability) {
-            if ($user->hasRole('master')) {
+            if ($user->hasRole('admin')) {
                 return true;
             }
         });

@@ -4,6 +4,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BlogTutorialController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\KalibrasiController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SensorController;
 use App\Http\Controllers\UserController;
@@ -21,20 +22,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [FrontendController::class, 'index'])->name('home');
-
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::resource('users', UserController::class);
-Route::resource('artikel', ArtikelController::class);
-Route::resource('kategori', KategoriController::class);
-Route::resource('tutorial', BlogTutorialController::class);
-Route::get('/tabel/sensor-suhu', [SensorController::class, 'tabelsuhu'])->name('tabel.suhu');
-
-Auth::routes();
-
-
-
 Route::get('/blog/{slug}', [ArtikelController::class, 'blog'])->name('blog');
 
 
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+
+Route::resource('artikel', ArtikelController::class)->middleware('auth');
+Route::resource('kategori', KategoriController::class)->middleware('auth');
+Route::resource('tutorial', BlogTutorialController::class)->middleware('auth');
+Route::get('/rekap', [SensorController::class, 'rekap'])->name('rekap')->middleware('auth');
+Route::get('/rekap/sensor-suhu', [SensorController::class, 'tabelsuhu'])->name('tabel.suhu')->middleware('auth');
+Route::resource('kalibrasi', KalibrasiController::class)->middleware('auth');
+
+Auth::routes();
+
 Route::get('/input', [SensorController::class, 'input']);
+

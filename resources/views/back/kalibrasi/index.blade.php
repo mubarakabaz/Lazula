@@ -3,35 +3,76 @@
 
 <div class="container-xl">
 
-    <h1 class="app-page-title">Overview</h1>
+    <h1 class="app-page-title"> Kalibrasi Larutan Nutrisi</h1>
 
-    <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
-        <div class="inner">
-            <div class="app-card-body p-3 p-lg-4">
-                <h6>SELAMAT DATANG</h6>
-                <h1 class="display-6 mb-3">{{ Auth::user()->name }}</h1>
-                <div class="row gx-5 gy-3">
-                    <div class="col-12 col-lg-9">
+    <div class="app-card app-card-chart h-100 shadow-sm">
+        <div class="app-card-header p-3">
 
-                        <div>
-                            Selamat datang di aplikasi sistem monitoring larutan nutrisi hidroponik.
-                            Siliahkan <a href="{{url('kalibrasi')}}" class="text">kalibrasi</a> 
-                            alat terlebih dahulu sebelum menggunakan aplikasi ini. 
-                        </div>
-
-                    </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Kalibrasi Ulang Larutan Nutrisi</li>
+                        </ol>
+                    </nav>
                 </div>
-                <!--//row-->
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <!--//col-->
+
             </div>
-            <!--//app-card-body-->
-
         </div>
-        <!--//inner-->
-    </div>
-    <!--//app-card-->
+        <!--//app-card-header-->
+        <div class="app-card-body p-3 p-lg-4">
+            <div class="app-card app-card-orders-table shadow-sm">
+                <div class="app-card-body">
 
-    <div class="row g-4 mb-4">
+                    <table class="table app-table-hover mb-0 text-left">
+                        <thead>
+                            <tr>
+                                <th class="cell">ID</th>
+                                <th class="cell">Terakhir Di Ubah</th>
+                                <th class="cell">PH Min</th>
+                                <th class="cell">PH Max</th>
+                                <th class="cell">TDS Min</th>
+                                <th class="cell">TDS Max</th>
+                                <th class="cell">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($kalibrasi as $row)
+                            <tr>
+                                <td class="cell">{{ $row->id }}</td>
+                                <td class="cell">{{ $row->updated_at }}</td>
+                                <td class="cell">{{ $row->phmin }}</td>
+                                <td class="cell">{{ $row->phmax }}</td>
+                                <td class="cell">{{ $row->tdsmin }}</td>
+                                <td class="cell">{{ $row->tdsmax }}</td>
+                                <td class="cell">
+                                    <a href="{{ route('kalibrasi.edit', $row->id) }}" class="btn app-btn-warning">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td class="cell">Data tidak ditemukan</td>
+                            </tr>
+                            @endforelse
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <!--//app-card-body-->
+            </div>
+        </div>
+        <!--//app-card-body-->
+    </div>
+
+    
+
+    <div class="row g-4 mb-4 mt-2">
         <div class="col-6 col-lg-3">
             <div class="app-card app-card-stat shadow-sm h-60">
                 <div class="app-card-body p-3 p-lg-4">
@@ -234,61 +275,6 @@
 
     </div>
     <!--//row-->
-
-
-    <div class="row g-4 mb-4">
-        <div class="app-card app-card-chart h-100 shadow-sm">
-            <div class="app-card-header p-3">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-auto">
-                        <h4 class="app-card-title">Grafik Sensor</h4>
-                    </div>
-                    <!--//col-->
-                    <div class="col-auto">
-
-                        <!--//card-header-actions-->
-                    </div>
-                    <!--//col-->
-                </div>
-                <!--//row-->
-            </div>
-            <!--//app-card-header-->
-            <div class="app-card-body p-3 p-lg-4">
-                <!-- <div class="mb-3 d-flex">
-                        <select class="form-select form-select-sm ms-auto d-inline-flex w-auto">
-                            <option value="1" selected>This week</option>
-                            <option value="2">Today</option>
-                            <option value="3">This Month</option>
-                            <option value="3">This Year</option>
-                        </select>
-                    </div> -->
-                <div class="chart-container">
-                    <canvas id="canvas-linechart"></canvas>
-                </div>
-            </div>
-            <!--//app-card-body-->
-        </div>
-        <!--//app-card-->
-    </div>
-
-
-
-
-    <div class="row g-4 mb-4">
-        <div class="card full-height">
-            <div class="card-header">
-                <div class="card-head-row">
-                    <div class="card-title">Artikel Tutorial</div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-
-                </div>
-
-            </div>
-        </div>
-    </div>
 </div>
 
 @endsection

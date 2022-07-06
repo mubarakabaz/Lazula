@@ -25,7 +25,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::all();
+        $artikel = DB::table('artikel')->paginate(10);
         
         return view('back.blog.index', compact('artikel'));
     }

@@ -5,27 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission;
 
 class DashboardController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth');
     }
-
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $user = $request->user();
+
         $sensor = DB::table('sensor')->orderBy('created_at', 'desc')->limit(1)->get();
 
         return view('back.dashboard', [
-            'sensor' => $sensor
+            'sensor' => $sensor,
+            'user' => $user,
         ]);
     }
+
+    
 
     /**
      * Show the form for creating a new resource.

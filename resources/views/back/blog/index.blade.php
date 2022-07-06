@@ -96,6 +96,13 @@
         </div>
         <!--//app-card-body-->
     </div>
+
+    <nav class="app-pagination">
+        <ul class="pagination justify-content-center">
+            {{$artikel->links('pagination::bootstrap-4')}}
+        </ul>
+    </nav>
+    <!--//app-pagination-->
 </div>
 
 @endsection

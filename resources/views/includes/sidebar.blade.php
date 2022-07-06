@@ -3,8 +3,8 @@
     <div class="sidepanel-inner d-flex flex-column">
         <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
         <div class="app-branding">
-            <a class="app-logo" href="index.html"><img class="logo-icon me-2"
-                    src="{{ asset('back/images/mio-logo.png') }}" alt="logo"><span class="logo-text">MIO</span></a>
+            <a class="app-logo" href="{{route('dashboard')}}"><img class="logo-icon me-2"
+                    src="{{ asset('back/images/mio-logo.png') }}" alt="logo"><span class="logo-text">Lazula</span></a>
 
         </div>
         <!--//app-branding-->
@@ -27,9 +27,10 @@
                 </li>
                 <!-- Route ke halaman Overview / Beranda -->
 
-                <li class="nav-item">
+                <li class="nav-item has-submenu">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link" href="#">
+                    <a class="nav-link submenu-toggle collapsed" href="#" data-bs-toggle="collapse"
+                        data-bs-target="#submenu-tabel" aria-expanded="false" aria-controls="submenu-tabel">
                         <span class="nav-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-table" viewBox="0 0 16 16">
@@ -37,15 +38,33 @@
                                     d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                             </svg>
                         </span>
-                        <span class="nav-link-text">Rekap Data Sensor</span>
+                        <span class="nav-link-text">Data Sensor</span>
+                        <span class="submenu-arrow">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                        </span>
+                        <!--//submenu-arrow-->
                     </a>
                     <!--//nav-link-->
+                    <div id="submenu-tabel" class="submenu submenu-tabel collapse" data-bs-parent="#menu-accordion"
+                        style="">
+                        <ul class="submenu-list list-unstyled">
+                            <li class="submenu-item"><a class="submenu-link" href="{{url('rekap')}}">Rekap</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Sensors</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Pompa</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <!-- Route ke halaman Rekap Data Tabel  -->
 
-                <li class="nav-item">
+                <li class="nav-item has-submenu">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link" href="#">
+                    <a class="nav-link submenu-toggle collapsed" href="#" data-bs-toggle="collapse"
+                        data-bs-target="#submenu-chart" aria-expanded="false" aria-controls="submenu-chart">
                         <span class="nav-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-bar-chart-line" viewBox="0 0 16 16">
@@ -53,11 +72,45 @@
                                     d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
                             </svg>
                         </span>
-                        <span class="nav-link-text">Chart Sensor</span>
+                        <span class="nav-link-text">Grafik Sensor</span>
+                        <span class="submenu-arrow">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                        </span>
+                        <!--//submenu-arrow-->
+                    </a>
+                    <!--//nav-link-->
+                    <div id="submenu-chart" class="submenu submenu-chart collapse" data-bs-parent="#menu-accordion"
+                        style="">
+                        <ul class="submenu-list list-unstyled">
+                            <li class="submenu-item"><a class="submenu-link" href="#">Sensor</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="#">Pompa</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Route ke halaman Chart Sensor -->
+
+                <li class="nav-item">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <a class="nav-link" href="{{ route('kalibrasi.index') }}">
+                        <span class="nav-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-gear" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                <path
+                                    d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-text">Kalibrasi</span>
                     </a>
                     <!--//nav-link-->
                 </li>
-                <!-- Route ke halaman Chart Sensor -->
+                <!-- Route ke Halaman Kalibrasi -->
 
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -76,9 +129,6 @@
                 </li>
                 <!-- Route ke Halaman Tutorial -->
 
-                @if (\Auth::user()->role)
-                    
-                @endif
 
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -113,6 +163,8 @@
                     <!--//nav-link-->
                 </li>
                 <!-- Route ke Halaman Artikel -->
+
+
 
 
             </ul>

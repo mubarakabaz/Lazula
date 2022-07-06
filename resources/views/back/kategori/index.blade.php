@@ -19,7 +19,7 @@
                 <div class="col-auto">
                     <div class="card-header-action">
                         <a href="{{ route('kategori.create') }}" class="btn app-btn-primary">
-                        <i class='bx bx-plus'></i> Kategori</a>
+                            <i class='bx bx-plus'></i> Kategori</a>
                     </div>
                     <!--//card-header-actions-->
                 </div>
@@ -50,7 +50,7 @@
                                     <td class="cell">{{ $row->slug }}</td>
                                     <td class="cell">
                                         <a href="{{ route('kategori.edit', $row->id) }}" class="btn app-btn-warning">
-                                        <i class="bi bi-pencil"></i>
+                                            <i class="bi bi-pencil"></i>
                                         </a>
 
                                         <form action="{{ route('kategori.destroy', $row->id) }}" method="POST"
@@ -58,7 +58,7 @@
                                             @csrf
                                             @method('delete')
                                             <button class="btn app-btn-danger">
-                                            <i class='bx bx-trash' ></i>
+                                                <i class='bx bx-trash'></i>
                                             </button>
                                         </form>
                                     </td>
@@ -80,6 +80,13 @@
         </div>
         <!--//app-card-body-->
     </div>
+
+    <nav class="app-pagination">
+        <ul class="pagination justify-content-center">
+            {{$kategori->links('pagination::bootstrap-4')}}
+        </ul>
+    </nav>
+    <!--//app-pagination-->
 </div>
 
 @endsection
