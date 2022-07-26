@@ -51,6 +51,7 @@
                                 <thead>
                                     <tr>
                                         <th class="cell">No</th>
+                                        <th class="cell">Waktu</th>
                                         <th class="cell">Suhu</th>
                                         <th class="cell">PH</th>
                                         <th class="cell">TDS</th>
@@ -65,6 +66,7 @@
                                     @foreach ($sensor as $row)
                                     <tr>
                                         <td class="cell">{{ $row->id}}</td>
+                                        <td class="cell">{{ $row->created_at}}</td>
                                         <td class="cell">{{ $row->suhu}}</td>
                                         <td class="cell">{{ $row->ph}}</td>
                                         <td class="cell">{{ $row->tds}}</td>

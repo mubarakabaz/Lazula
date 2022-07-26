@@ -15,13 +15,13 @@ class CreateSensorsTable extends Migration
     {
         Schema::create('sensor', function (Blueprint $table) {
             $table->id();
-            $table->text('suhu');
-            $table->text('ph');
-            $table->text('tds');
-            $table->text('ppu');
-            $table->text('ppd');
-            $table->text('ppn');
-            $table->text('pab');
+            $table->text('suhu')->nullable();
+            $table->text('ph')->nullable();
+            $table->text('tds')->nullable();
+            $table->text('ppu')->nullable();
+            $table->text('ppd')->nullable();
+            $table->text('ppn')->nullable();
+            $table->text('pab')->nullable();
             $table->timestamps();
         });
     }

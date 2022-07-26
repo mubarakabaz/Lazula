@@ -7,9 +7,10 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\KalibrasiController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SensorController;
-use App\Http\Controllers\UserController;
+use App\Models\Sensor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Barryvdh\DomPDF\Facade as PDF;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,13 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::resource('artikel', ArtikelController::class)->middleware('auth');
 Route::resource('kategori', KategoriController::class)->middleware('auth');
 Route::resource('tutorial', BlogTutorialController::class)->middleware('auth');
+
 Route::get('/rekap', [SensorController::class, 'rekap'])->name('rekap')->middleware('auth');
-Route::get('/rekap/sensor-suhu', [SensorController::class, 'tabelsuhu'])->name('tabel.suhu')->middleware('auth');
+Route::get('/rekap/cetak', [SensorController::class, 'cetak']);
+
+Route::get('/data-sensor', [SensorController::class, 'data_sensor'])->name('data-sensor')->middleware('auth');
+Route::get('/data-pompa', [SensorController::class, 'data_pompa'])->name('data-pompa')->middleware('auth');
+
 Route::resource('kalibrasi', KalibrasiController::class)->middleware('auth');
 
 Auth::routes();

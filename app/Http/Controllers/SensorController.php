@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\DB;
 class SensorController extends Controller
 {
     public function rekap(){
-        $sensor = DB::table('sensor')->paginate(10);
+        $sensor = DB::table('sensor')->orderBy('created_at', 'desc')->paginate(10);
+        // $sensor = DB::table('sensor')->paginate(10);
         return view('back.tabels.rekap',[
             'sensor' => $sensor,
         ]);
@@ -29,6 +30,26 @@ class SensorController extends Controller
         Sensor::create($request->all());
 
         // dd($data);
+        if($data == TRUE){
+            $kalibrasi = DB::table('kalibrasi')->where('id', '=', '1')->get();
+            
+            $phSetA = 'phSetA';
+            $phSetB = 'phSetB';
+            $tdsSetA = 'tdsSetA';
+            $tdsSetB = 'tdsSetB';
+
+            $row = array(
+                'phSetA' => $phSetA,
+                'phSetB' => $phSetB,
+                'tdsSetA' => $tdsSetA,
+                'tdsSetB' => $tdsSetB,
+            );
+
+            echo json_encode($row);
+        } 
+        else{
+            echo "Gagal";
+        }
     }
 
     public function tabelsuhu(){
@@ -40,5 +61,8 @@ class SensorController extends Controller
         ]);
     }
 
+    public function cetak(){
+        
+    }
     
 }

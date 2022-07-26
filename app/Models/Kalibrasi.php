@@ -12,10 +12,10 @@ class Kalibrasi extends Model
     protected $table = 'kalibrasi';
 
     protected $fillable = [
-        'phmin',
-        'phmax',
-        'tdsmin',
-        'tdsmax',
+        'phSetA',
+        'phSetB',
+        'tdsSetA',
+        'tdsSetB',
     ];
 
     

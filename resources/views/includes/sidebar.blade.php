@@ -54,8 +54,8 @@
                         style="">
                         <ul class="submenu-list list-unstyled">
                             <li class="submenu-item"><a class="submenu-link" href="{{url('rekap')}}">Rekap</a></li>
-                            <li class="submenu-item"><a class="submenu-link" href="#">Sensors</a></li>
-                            <li class="submenu-item"><a class="submenu-link" href="#">Pompa</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="{{url('data-sensor')}}">Sensors</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="{{url('data-pompa')}}">Pompa</a></li>
                         </ul>
                     </div>
                 </li>
