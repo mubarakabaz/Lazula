@@ -18,5 +18,10 @@ class Kalibrasi extends Model
         'tdsSetB',
     ];
 
+    protected $hidden = [
+        'id',
+        'created_at',
+        'updated_at',
+    ];
     
 }

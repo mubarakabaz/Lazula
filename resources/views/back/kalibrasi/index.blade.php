@@ -43,10 +43,10 @@
                             <tr>
                                 <td class="cell">{{ $row->id }}</td>
                                 <td class="cell">{{ $row->updated_at }}</td>
-                                <td class="cell">{{ $row->phmin }}</td>
-                                <td class="cell">{{ $row->phmax }}</td>
-                                <td class="cell">{{ $row->tdsmin }}</td>
-                                <td class="cell">{{ $row->tdsmax }}</td>
+                                <td class="cell">{{ $row->phSetA }}</td>
+                                <td class="cell">{{ $row->phSetB }}</td>
+                                <td class="cell">{{ $row->tdsSetA }}</td>
+                                <td class="cell">{{ $row->tdsSetB }}</td>
                                 <td class="cell">
                                     <a href="{{ route('kalibrasi.edit', $row->id) }}" class="btn app-btn-warning">
                                         <i class="bi bi-pencil"></i>

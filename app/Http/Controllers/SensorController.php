@@ -31,21 +31,12 @@ class SensorController extends Controller
 
         // dd($data);
         if($data == TRUE){
-            $kalibrasi = DB::table('kalibrasi')->where('id', '=', '1')->get();
+            $kalibrasi = DB::table('kalibrasi')->get();
             
-            $phSetA = 'phSetA';
-            $phSetB = 'phSetB';
-            $tdsSetA = 'tdsSetA';
-            $tdsSetB = 'tdsSetB';
-
-            $row = array(
-                'phSetA' => $phSetA,
-                'phSetB' => $phSetB,
-                'tdsSetA' => $tdsSetA,
-                'tdsSetB' => $tdsSetB,
-            );
-
-            echo json_encode($row);
+            $kalibrasi = json_encode($kalibrasi, true);
+            // dd($kalibrasi);
+            // print_r($kalibrasi);
+            echo "$kalibrasi";
         } 
         else{
             echo "Gagal";
@@ -62,7 +53,7 @@ class SensorController extends Controller
     }
 
     public function cetak(){
-        
+        //
     }
     
 }

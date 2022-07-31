@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kalibrasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KalibrasiController extends Controller
 {
@@ -41,7 +42,7 @@ class KalibrasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     //   
     }
 
     /**
@@ -63,7 +64,8 @@ class KalibrasiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kalibrasi = Kalibrasi::find($id);
+        return view('back.kalibrasi.edit', compact('kalibrasi'));
     }
 
     /**
@@ -75,7 +77,19 @@ class KalibrasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $data = Kalibrasi::findOrFail($id);
+
+        $data->update([
+            'phSetA' => $request->phSetA,
+            'phSetB' => $request->phSetB,
+            'tdsSetA' => $request->tdsSetA,
+            'tdsSetB' => $request->tdsSetB,
+        ]);
+        
+
+        Alert::info('Berhasil', 'Kalibrasi berhasil diubah');
+        return redirect()->route('kalibrasi.index');
     }
 
     /**
