@@ -30,7 +30,7 @@
 <body class="app">
 
     <!-- Header with Sidebar -->
-    @include('includes.header')
+    @include('includes.back.header')
 
     <div class="app-wrapper">
         <div class="app-content pt-3 p-md-3 p-lg-4">
@@ -41,7 +41,7 @@
         <!--//app-content-->
 
         <!-- Footer -->
-        @include('includes.footer')
+        @include('includes.back.footer')
         <!--//app-footer-->
 
     </div>
@@ -49,7 +49,7 @@
 
 
     <!-- Script -->
-    @include('includes.scriptsjs')
+    @include('includes.back.scriptsjs')
     @include('sweetalert::alert')
 
 </body>

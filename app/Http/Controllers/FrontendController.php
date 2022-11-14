@@ -11,18 +11,48 @@ use Illuminate\Support\Str;
 
 class FrontendController extends Controller
 {
-    public function __construct($recent)
-    {
-        $this->recent = $recent;
-    }
-    public function index(Request $request)
-    {
+    
+    public function index(){
+
+        // Tampilkan Data Artikel Terbaru (limit 3)
+        $forecent = Artikel::orderBy('created_at', 'desc')->take(3)->get();
+
+        // Tampilkan Data Artikel berdasarkan Kategori
+        $techartikel = Artikel::with('kategori')
+                                ->where('kategori_id', '=', '1')
+                                ->orderBy('created_at', 'desc')
+                                ->take(2)
+                                ->get();
+
+        $sejarahartikel = Artikel::with('kategori')
+                                ->where('kategori_id', '=', '2')
+                                ->orderBy('created_at', 'desc')
+                                ->take(3)
+                                ->get();
+                                
+        $agriculturartikel = Artikel::with('kategori')
+                                ->where('kategori_id', '=', '3')
+                                ->orderBy('created_at', 'desc')
+                                ->take(1)
+                                ->get();
+                                
+        $aqidahartikel = Artikel::with('kategori')
+                                ->where('kategori_id', '=', '4')
+                                ->orderBy('created_at', 'desc')
+                                ->take(2)
+                                ->get();
+                                
+        $tauhdiartikel = Artikel::with('kategori')
+                                ->where('kategori_id', '=', '5')
+                                ->orderBy('created_at', 'desc')
+                                ->take(1)
+                                ->get();
+
+        $mainartikel = Artikel::orderBy('created_at', 'desc')->take(2)->get();
         
+        $slide = DB::table('artikel')->orderBy('created_at', 'desc')->take(10)->get();  
+
         $artikel = Artikel::all();
-
-        $recentpost = Artikel::orderBy('created_at', 'desc')->take(3)->get();
-
-        
         $kategori = Kategori::all();
         
         $iklan = Iklan::all();
@@ -31,7 +61,14 @@ class FrontendController extends Controller
             'kategori' => $kategori,
             'artikel' => $artikel,
             'iklan' => $iklan,
-            'recentpost' => $recentpost,
+            'forecent' => $forecent,
+            'techartikel' => $techartikel,
+            'sejarahartikel' => $sejarahartikel,
+            'mainartikel' => $mainartikel,
+            'slide' => $slide,
+            'agriculturartikel' => $agriculturartikel,
+            'aqidahartikel' => $aqidahartikel,
+            'tauhdiartikel' => $tauhdiartikel,
         ]);
     }
     
@@ -40,24 +77,16 @@ class FrontendController extends Controller
         $iklan = Iklan::all();
         $kategori = Kategori::all();
         $artikel = Artikel::where('slug', $slug)->first();
+        
+        
+        $forecent = Artikel::orderBy('created_at', 'desc')->take(3)->get();
 
+        ddd($artikel);
         return view('front.artikel.detail-artikel', [
             'artikel' => $artikel,
             'kategori' => $kategori,
             'iklan' => $iklan,
-        ]);
-    }
-
-    public function category($slug){
-        
-        $iklan = Iklan::all();
-        $kategori = Kategori::where('slug', $slug)->first();
-        $artikel = Artikel::all();
-
-        return view('front.artikel.detail-category', [
-            'kategori' => $kategori,
-            'iklan' => $iklan,
-            'artikel' => $artikel,
+            'forecent' => $forecent,
         ]);
     }
 

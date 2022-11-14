@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
 class Artikel extends Model
 {
     use HasFactory;
-
-    const BODY_LENGTH = 200;
 
     protected $table = 'artikel';
 
@@ -22,6 +19,7 @@ class Artikel extends Model
         'kategori_id',
         'user_id',
         'gambar_artikel',
+        'thumbnail_artikel',
         'is_active',
         'viewers',
     ];
@@ -36,8 +34,5 @@ class Artikel extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function limit(){
-        return Str::limit($this->body, self::BODY_LENGTH);
-    }
 
 }

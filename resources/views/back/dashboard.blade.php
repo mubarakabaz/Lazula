@@ -168,7 +168,7 @@
     </div>
     <!--//row-->
 
-    <div class="row g-4 mb-4">
+    <!-- <div class="row g-4 mb-4">
         <div class="card full-height">
             <div class="card-header">
                 <div class="card-head-row">
@@ -182,7 +182,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 @endsection

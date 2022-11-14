@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\Kategori;
-use Illuminate\Auth\Events\Validated;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -54,7 +54,9 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
-            'body' => 'required'
+            'body' => 'required',
+            'kategori_id' => 'required',
+            'gambar_artikel' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $data = $request->all();

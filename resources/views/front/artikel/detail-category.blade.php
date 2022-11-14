@@ -1,1 +1,0 @@
-<h1>Detail Kategori</h1>

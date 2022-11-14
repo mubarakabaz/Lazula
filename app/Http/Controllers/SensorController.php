@@ -24,6 +24,4 @@ class SensorController extends Controller
 
         dd($data);
     }
-
-    
 }

@@ -15,8 +15,8 @@
                     <div class="auth-form-container text-start mx-auto">
                         <form method="POST" action="{{ route('register') }}" class="auth-form auth-signup-form">
                             @csrf
-                            <div class="email mb-3">
-                                <label class="sr-only" for="signup-email">Nama Lengkap</label>
+                            <div class="name mb-3">
+                                <label class="sr-only" for="name">Nama Lengkap</label>
                                 <input id="name" name="name" type="text"
                                     class="form-control signup-name @error('name') is-invalid @enderror"
                                     value="{{ old('name') }}" placeholder="Nama Lengkap" required autocomplete="name"
@@ -28,6 +28,7 @@
                                 </span>
                                 @enderror
                             </div>
+                            
                             <div class="email mb-3">
                                 <label class="sr-only" for="signup-email">{{ __('Email Address') }}</label>
                                 <input id="email" name="email" type="email" class="form-control signup-email"
