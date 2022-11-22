@@ -24,4 +24,8 @@ class SensorController extends Controller
 
         dd($data);
     }
+
+    public function pengaturan(){
+        //
+    }
 }

@@ -17,7 +17,7 @@
                             <div class="email mb-3">
                                 <label class="sr-only" for="email">{{ __('Email Address') }}</label>
                                 <input id="signin-email" name="email" type="email" class="form-control signin-email"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                placeholder="nama@gmail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -37,13 +37,13 @@
                                 @enderror
                                 <div class="extra mt-3 row justify-content-between">
                                     <div class="col-6">
-                                        <div class="form-check">
+                                        <!-- <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="RememberPassword"
                                                 name="remember" {{ old('remember') ? 'checked' : '' }}>
                                             <label class="form-check-label" for="RememberPassword">
                                                 {{ __('Remember Me') }}
                                             </label>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <!--//col-6-->
                                     <div class="col-6">

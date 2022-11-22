@@ -4,9 +4,11 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ApiSensorController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriContrtroller;
 use App\Http\Controllers\IklanController;
 use App\Http\Controllers\SensorController;
@@ -25,10 +27,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [FrontendController::class, 'index']);
-Route::get('/detail-artikel/{$slug}', [FrontendController::class, 'detail'])->name('detail-artikel');
-Route::get('/about', [FrontendController::class, 'about'])->name('about');
-Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes();
 
@@ -38,8 +37,9 @@ Route::resource('artikel', ArtikelController::class);
 Route::resource('iklan', IklanController::class);
 Route::resource('tutorial', TutorialController::class);
 
-Route::post('/api', ApiSensorController::class);
+
 Route::get('/input', [SensorController::class, 'input']);
+Route::get('/pengaturan', [SensorController::class, 'pengaturan']);
 
 /**
  * Route Tabel Sensor

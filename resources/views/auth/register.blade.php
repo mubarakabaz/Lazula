@@ -72,8 +72,8 @@
                         <!--//auth-form-->
 
                         <div class="auth-option text-center pt-2">
-                            <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto"
-                                style="background-color: #00C2CB;">Log In</button>
+                            <a href="{{ route('login'); }}" class="btn app-btn-primary w-100 theme-btn mx-auto"
+                                style="background-color: #00C2CB;">Log In</a>
 
                         </div>
                     </div>
